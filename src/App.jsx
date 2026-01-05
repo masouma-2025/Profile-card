@@ -1,34 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-
+import profilePhoto from './assets/profile.png'
+import ProfilePage from './components/profilePage'
 function App() {
-  const [count, setCount] = useState(0)
+    const user = {
+    name: "Asma",
+    username: "@Asmamohamade",
+    avatarImage: profilePhoto, // if you are using image later, we can replace this with avatarUrl
+    xp: 180,
+    lastActive: "Dec 22, 2025",
+    streakDays: 2,
+    longestStreak: 2,
+    recentBadgesText: "No badges earned yet.",
+  
+    personalInfo: {
+      Email: "Asmamohamad@gmail.com",
+      Gender: "FMale",
+      Country: "Afghanistan",
+      "Province orState ": "Herat",
+      "Teaching Experience (in years)": "21",
+      "Date Of Birth": "2/16/86",
+      "Online Portfolio Link": "N/A",
+      "LinkedIn Link": "Open the Link",
+      Languages: "farsi, english",
+      Bio: "Mentor @CodeToInspire",
+    },
+  
+    accountDetails: {
+      Role: "Mentor",
+      Status: "Active",
+      Verification: "Verified",
+    },
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+   <>
+     <div className="Page">
+       <ProfilePage user={user}></ProfilePage>
+     </div>
+   </>
   )
 }
 
