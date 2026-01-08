@@ -1,11 +1,11 @@
 import './App.css'
-import profilePhoto from './assets/profile.png'
+import profile from './assets/profile.png'
 import ProfilePage from './components/profilePage'
 function App() {
     const user = {
     name: "Asma",
     username: "@Asmamohamade",
-    avatarImage: profilePhoto, // if you are using image later, we can replace this with avatarUrl
+    avaterImage: profile, // if you are using image later, we can replace this with avatarUrl
     xp: 180,
     lastActive: "Dec 22, 2025",
     streakDays: 2,

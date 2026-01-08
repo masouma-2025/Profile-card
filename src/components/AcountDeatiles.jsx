@@ -1,3 +1,4 @@
+import Row from "./row"
 export default function AcountDetiles({detalis}){
     return(
         <div className="card infoCard">
